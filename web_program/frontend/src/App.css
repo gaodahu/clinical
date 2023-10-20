@@ -1,0 +1,303 @@
+.App {
+  height: 100vh;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+.sidebar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 220px;
+  height: 100vh;
+  background-color: LightGreen;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
+}
+/*.input-container {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    align-items: stretch; !* Ensures that the label and input take up the full width of their container *!*/
+/*}*/
+
+.input-label {
+    font-size: 16px;
+    margin-bottom: 8px; /* This will give a little space between the label and the textbox */
+}
+.past-questions-header {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.past-questions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Spacing between items */
+}
+
+.pq-item {
+  width: 95%;
+  height: 50px;
+  background-color: transparent;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.pq-item:hover {
+    background-color: LimeGreen;
+    cursor: pointer;
+}
+.clear-history-btn {
+  margin-top: auto;
+  width: 50%;
+  padding: 20px 10px;
+}
+.submitbutton{
+  border-radius: 10px;
+}
+.centered-content {
+  display: flex;
+  flex-direction: column;
+  /*justify-content: center;*/
+  align-items: center;
+  height: 100vh;
+  /*padding: 30px ;*/
+  /*margin: 100px;*/
+}
+.example_button{
+  height: 5vh;
+  padding: 10px 20px; /* Added horizontal padding */
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #69c969;
+  color: white;
+  transition: background-color 0.3s;
+
+}
+.centered-content div {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+.settings-icon {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.settings-icon span {
+  margin-left: 10px;
+}
+
+.settings {
+  position: fixed;
+  top: 60px;
+  right: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  padding: 20px;
+  width: 250px;
+}
+.socket-panel {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  max-width: 200px; /* or any desired width */
+  overflow: auto;
+}
+.setting-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.question-section {
+  display: flex;
+  flex-direction: row; /* Changed from column to row */
+  align-items: center;
+
+  width: 50%;
+}
+
+.question-section input {
+  flex: 1; /* Make input take the remaining space */
+  width: 100px;
+  height: 11vh;
+  text-align: center;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  margin-right: 20px; /* Space between input and button */
+}
+
+.question-section button {
+  height: 15vh;
+  padding: 10px 20px; /* Added horizontal padding */
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #007BFF;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.question-section button:hover {
+  background-color: #0056b3;
+}
+
+/*.answer-section {*/
+/*  width: 50%;*/
+/*  height: 150px;*/
+/*  margin-top: 20px;*/
+/*  padding: 10px;*/
+/*  font-size: 16px;*/
+/*}*/
+/*Now, the input box and the submit*/
+
+.query-section {
+  width: 50%;
+  margin-top: 25px;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #f3f3f3;
+  text-align: center;
+  border: 1px solid #e0e0e0;
+}
+
+.answer-section {
+  width: 50%;
+  height: 100px;
+  margin-top: auto;
+  padding: 10px;
+  /*text-align: center;*/
+  font-size: 16px;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+}
+.main_content {
+  width: 50%;
+
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+
+.example-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /*background-color: rgba(0,0,0,0.5);*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 1000;
+}
+
+/*.example-popup div {*/
+/*  background-color: #ffffff;*/
+/*  border-radius: 10px;*/
+/*  margin: 30px;*/
+/*  padding: 20px;*/
+/*  text-align: center;*/
+/*  cursor: pointer;*/
+/*  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);*/
+/*  word-wrap: break-word;*/
+/*}*/
+.example-block div{
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin: 30px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  word-wrap: break-word;
+}
+.example-block div:hover {
+  background-color: #f0f0f0;
+}
+
+.example-container {
+  background-color: #90EE90;
+  padding: 30px;
+  width: 52%;
+  border-radius: 10px;
+  position: relative;
+  padding-top: 50px;
+}
+.close-icon {
+  position: absolute;
+  display: inline-block;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: red;
+  width: 10px;
+  height: 10px;
+  font-weight: bold;
+}
+
+
+.example {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.example:hover {
+  background-color: #e0e0e0;
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
